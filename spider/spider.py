@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 import requests
 from selenium.webdriver.common.by import By
@@ -6,12 +5,12 @@ import time
 import os
 
 os.system('chcp 65001')
-print('\n§¡¤@ºô¯¸\n>>> https://www.junyiacademy.org/\n')
+print('\nå‡ä¸€ç¶²ç«™\n>>> https://www.junyiacademy.org/\n')
 
-url = input('½Ğ¿é¤Jºô§}ªºurl«áºó(https://www.junyiacademy.org/XXXXXXXXXXXXXXXX)(XXX³¡¤À)\n')
+url = input('è«‹è¼¸å…¥ç¶²å€çš„urlå¾Œç¶´(https://www.junyiacademy.org/XXXXXXXXXXXXXXXX)(XXXéƒ¨åˆ†)\n')
 
-if url.split('/')[0] == 'exam':#°ª¤¤or°ê¤p
-    print('\n<°ê¤p/°ª¤¤ºİ>\nºô§}>>> https://www.junyiacademy.org/' +url)
+if url.split('/')[0] == 'exam':#é«˜ä¸­oråœ‹å°
+    print('\n<åœ‹å°/é«˜ä¸­ç«¯>\nç¶²å€>>> https://www.junyiacademy.org/' +url)
     answer = requests.get('https://www.junyiacademy.org/api/v2/perseus/' +url+ '/get_question')
 
     if answer.status_code == 200:
@@ -60,11 +59,11 @@ if url.split('/')[0] == 'exam':#°ª¤¤or°ê¤p
                 driver.find_element(By.ID,"check-answer-button").click()
 
     else:
-        print('Àò¨ú¥¢±Ñ ½Ğ½T»{ºô§}¬O§_¥¿½T\n>>> https://www.junyiacademy.org/exam/' + url)
+        print('ç²å–å¤±æ•— è«‹ç¢ºèªç¶²å€æ˜¯å¦æ­£ç¢º\n>>> https://www.junyiacademy.org/exam/' + url)
 
 
-else:#°ê¤¤
-    print('\n<°ê¤¤ºİ>\nºô§}>>> https://www.junyiacademy.org/' +url)
+else:#åœ‹ä¸­
+    print('\n<åœ‹ä¸­ç«¯>\nç¶²å€>>> https://www.junyiacademy.org/' +url)
     answer = requests.get('https://www.junyiacademy.org/api/v2/perseus/' +url.split('/')[-1]+ '/get_question')
 
     if answer.status_code == 200:
@@ -91,11 +90,11 @@ else:#°ê¤¤
             driver.find_element(By.ID,"next-question-button").click()
 
     else:
-        print('Àò¨ú¥¢±Ñ ½Ğ½T»{ºô§}¬O§_¥¿½T\n>>> https://www.junyiacademy.org/exam/' + url)
+        print('ç²å–å¤±æ•— è«‹ç¢ºèªç¶²å€æ˜¯å¦æ­£ç¢º\n>>> https://www.junyiacademy.org/exam/' + url)
 
 
 
-print('\nµ{¦¡¤w¸gµ²§ô ½Ğ¦Û¦æ¥æ¨÷¡C')
+print('\nç¨‹å¼å·²ç¶“çµæŸ è«‹è‡ªè¡Œäº¤å·ã€‚')
 os.system('pause')
 
 
